@@ -1,0 +1,99 @@
+# Gettext Message File for default.
+# Your Name <your@email>, Year
+msgid ""
+msgstr ""
+"Project-Id-Version: default\n"
+"POT-Creation-Date: 2009-01-05 10:57default\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Your Name <your@email>\n"
+"Language-Team: Name <email>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-encodings: latin9 utf-8\n"
+"Domain: default\n"
+
+
+#: from ../skins/cfm_email_search_results.pt
+#.   <input type="button" class="standalone" value="button_back" onclick="javascript:history.back()" />
+#: from ../skins/cfm_email_search_results.pt
+msgid "button_back"
+msgstr ""
+
+#: from ../skins/cfm_email_search_results.pt
+#.   <input type="submit" class="standalone" value="button_ok" name="cfm_sendmail" />
+msgid "button_ok"
+msgstr ""
+
+#: from ../skins/cfm_get.pt
+#.   <span>Click here:</span>
+msgid "cfm_click_here"
+msgstr ""
+
+#: from ../skins/cfm_get.pt
+#.   <h1>
+#.   	File Retrieval
+#.         </h1>
+msgid "cfm_get_heading"
+msgstr ""
+
+#: from ../skins/cfm_get.pt
+#.   <p class="cfm_get_text">
+#.   	Your download should start in a few seconds. If it doesn't, please click
+#.   	on the link below: 
+#.         </p>
+msgid "cfm_get_instructions"
+msgstr ""
+
+#: from ../skins/cfm_get.pt
+#.   <span>
+#.   	  You have requested the following file: 
+#.   	</span>
+msgid "cfm_get_intro"
+msgstr ""
+
+#: from ../skins/cfm_email_form.pt
+#.   <h1>
+#.           Search members to add to recipients list
+#.         </h1>
+msgid "heading_notify_content_form"
+msgstr ""
+
+#: from ../skins/cfm_email_search_results.pt
+#.   <strong />
+msgid "heading_search_results"
+msgstr ""
+
+#: from ../skins/cfm_email_search_results.pt
+#.   <th content="field/title">id</th>
+msgid "id"
+msgstr ""
+
+#: from ../skins/cfm_email_search_results.pt
+#.   <span>
+#.            Mail body
+#.         </span>
+msgid "label_mail_body"
+msgstr ""
+
+#: from ../skins/cfm_email_search_results.pt
+#.   <span>
+#.            Mail Subject
+#.         </span>
+msgid "label_mail_subject"
+msgstr ""
+
+#: from ../skins/cfm_email_search_results.pt
+#.   <span />
+msgid "label_no_results"
+msgstr ""
+
+#: from ../skins/cfm_email_search_results.pt
+#.   <span>
+#.            Add recipient emails (one email per line)
+#.         </span>
+msgid "label_notify_content_add_emails"
+msgstr ""

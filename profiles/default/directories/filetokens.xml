@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<object name="filetokens" meta_type="CPS ZODB Directory">
+ <property name="title"></property>
+ <property name="schema">file_tokens</property>
+ <property name="schemas"/>
+ <property name="schema_search"></property>
+ <property name="schemas_search"/>
+ <property name="layout"></property>
+ <property name="readonly">False</property>
+ <property name="layout_search"></property>
+ <property name="acl_directory_view_roles"></property>
+ <property name="acl_entry_create_roles"></property>
+ <property name="acl_entry_delete_roles"></property>
+ <property name="acl_entry_view_roles"></property>
+ <property name="acl_entry_edit_roles"></property>
+ <property name="id_field">token</property>
+ <property name="title_field"></property>
+ <property name="search_substring_fields"/>
+ <property name="is_hierarchical">False</property>
+ <property name="password_field"></property>
+ <cache-manager name="None"/>
+</object>

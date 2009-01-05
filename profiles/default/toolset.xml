@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tool-setup>
+ <required tool_id="portal_filemailer"
+           class="Products.CPSFileMailer.tool.FileMailerTool"/>
+</tool-setup>
+

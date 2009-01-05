@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<object name="file_tokens" meta_type="CPS Schema">
+ <field name="doc" meta_type="CPS String Field">
+  <property name="write_process_dependent_fields"/>
+ </field>
+ <field name="expiration" meta_type="CPS DateTime Field">
+  <property name="write_process_dependent_fields"/>
+ </field>
+ <field name="token" meta_type="CPS String Field">
+  <property name="write_process_dependent_fields"/>
+ </field>
+</object>

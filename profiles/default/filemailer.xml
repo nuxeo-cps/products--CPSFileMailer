@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<object name="portal_filemailer" meta_type="File Mailer Tool">
+  <property name="fields_mapping">
+    <element value="File:file"/>
+  </property>
+</object>

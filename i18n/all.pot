@@ -1,0 +1,47 @@
+# Gettext Message File for default.
+# Your Name <your@email>, Year
+msgid ""
+msgstr ""
+"Project-Id-Version: default\n"
+"POT-Creation-Date: 2009-01-05 11:19default\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Your Name <your@email>\n"
+"Language-Team: Name <email>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-encodings: latin9 utf-8\n"
+"Domain: default\n"
+
+#.   <span>Click here:</span>
+#: from ../skins/cfm_get.pt
+msgid "cfm_click_here"
+msgstr ""
+
+#.   <h1>
+#.   	File Retrieval
+#.         </h1>
+#: from ../skins/cfm_get.pt
+msgid "cfm_get_heading"
+msgstr ""
+
+#.   <p class="cfm_get_text">
+#.   	Your download should start in a few seconds. If it doesn't, please click
+#.   	on the link below: 
+#.         </p>
+#: from ../skins/cfm_get.pt
+msgid "cfm_get_instructions"
+msgstr ""
+
+#.   <span>
+#.   	  You have requested the following file: 
+#.   	</span>
+#: from ../skins/cfm_get.pt
+msgid "cfm_get_intro"
+msgstr ""
+
+msgid "cpsfilemailer_token_expiration_msg"
+msgstr ""

@@ -1,0 +1,40 @@
+<tal:block define="tok request/form/token;
+	   	   base_url here/portal_url/getBaseUrl;
+		   target python:here.portal_filemailer.retrieveFile(tok);
+		   filename target/title_or_id;
+     	           dl_url string:${base_url}portal_filemailer/${filename}?token=${tok};
+		   ">
+
+  <metal:block use-macro="here/main_template/macros/master">
+
+    <metal:block fill-slot="header">
+      <h1 i18n:translate="cfm_get_heading">
+	File Retrieval
+      </h1>
+    </metal:block>
+  
+    <metal:block metal:fill-slot="main">
+      
+      <p class="cfm_get_text">
+	<span i18n:translate="cfm_get_intro">
+	  You have requested the following file: 
+	</span>
+	<span class="cfm_get_filename" tal:content="target/title_or_id"/>
+      </p>
+    
+      <p class="cfm_get_text" i18n:translate="cfm_get_instructions">
+	Your download should start in a few seconds. If it doesn't, please click
+	on the link below: 
+      </p>
+      <p>
+	<span i18n:translate="cfm_click_here">Click here:</span>
+	<a tal:attributes="href dl_url"
+	   tal:content="target/title_or_id"/>
+      </p>
+      <iframe tal:attributes="src dl_url"
+              id="file_download"
+      	      width="0" height="0" scrolling="no" frameborder="0"
+              src=""></iframe>
+    </metal:block>
+  </metal:block>
+</tal:block>

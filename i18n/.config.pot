@@ -1,0 +1,1 @@
+/home/gracinet/Checkouts/CPS-3.trunk-full/CPSFileMailer/i18n/cpsfilemailer.pot

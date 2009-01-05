@@ -1,0 +1,14 @@
+Requires
+~~~~~~~~
+- CPSSubscriptions
+New features
+~~~~~~~~~~~~
+- 
+Bug fixes
+~~~~~~~~~
+- Retrieval URL now ends with proper file name, to avoid confusing some user
+  agents 
+- 2-phase download: Send a link to a html page that starts the download
+New internal features
+~~~~~~~~~~~~~~~~~~~~~
+- Field to retrieve can be configured according to portal type
