@@ -19,14 +19,14 @@ msgstr ""
 #.   <span>Click here:</span>
 #: from ../skins/cfm_get.pt
 msgid "cfm_click_here"
-msgstr ""
+msgstr "Cliquez ici:"
 
 #.   <h1>
 #.   	File Retrieval
 #.         </h1>
 #: from ../skins/cfm_get.pt
 msgid "cfm_get_heading"
-msgstr ""
+msgstr "Téléchargement"
 
 #.   <p class="cfm_get_text">
 #.   	Your download should start in a few seconds. If it doesn't, please click
@@ -34,14 +34,14 @@ msgstr ""
 #.         </p>
 #: from ../skins/cfm_get.pt
 msgid "cfm_get_instructions"
-msgstr ""
+msgstr "Votre téléchargement devrait démarrer automatiquement dans quelques secondes. Dans le cas contraire, veuillez cliquez sur le lien ci-dessous pour le lancer."
 
 #.   <span>
 #.   	  You have requested the following file: 
 #.   	</span>
 #: from ../skins/cfm_get.pt
 msgid "cfm_get_intro"
-msgstr ""
+msgstr "Vous avez demandé le fichier suivant:"
 
 msgid "cpsfilemailer_token_expiration_msg"
-msgstr "Ce lien est valable jusqu'au %d/%m/%Y, %H:%m"
+msgstr "Ce lien est valable jusqu'au %d/%m/%Y, à %H:%M"
