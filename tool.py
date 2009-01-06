@@ -199,7 +199,7 @@ class FileMailerTool(UniqueObject, PropertiesPostProcessor,
             # I can't see any legit use of this, but a few nasty ones
             raise BadRequest(
                 "! File name changed. Should have been '%s'" % f.title_or_id())
-        return FileServer(f, req)
+        return FileServer(f, req).__of__(self)
 
 
 class FileServer(Acquisition.Explicit):

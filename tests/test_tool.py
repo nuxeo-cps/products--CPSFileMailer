@@ -86,6 +86,15 @@ class FileMailerToolIntegrationTestCase(CPSTestCase):
         base = self.portal.absolute_url()
         self.portal.REQUEST.form['token'] = token
 
+        path = self.portal.portal_filemailer.getPhysicalPath() + (filename,)
+        # BaseRequest.traverse() needs a non empty list of parents, whose
+        # last item is more or less the beginning of traversal
+        self.portal.REQUEST['PARENTS'] = [self.app]
+        meth = self.portal.REQUEST.traverse('/'.join(path))
+        self.assertEquals('here it is', meth())
+
+        # Now, a restrictedTraverse from code (yes, that's a totally different
+        # piece of code being executed)
         fs = self.portal.portal_filemailer.restrictedTraverse(filename)
         self.assertEquals('here it is', fs.index_html())
 
