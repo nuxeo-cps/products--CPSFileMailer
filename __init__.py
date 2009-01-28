@@ -34,7 +34,6 @@ def initialize(registrar):
     """Initialize Paris Montagne Contacts content and tools.
     """
 
-    # optional ldap; to be triggered by external method only
     profile_registry.registerProfile(
         'default',
         'CPS File Mailer',
