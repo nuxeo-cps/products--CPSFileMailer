@@ -42,3 +42,12 @@ def initialize(registrar):
         'CPSFileMailer',
         EXTENSION,
         for_=ICPSSite)
+
+    profile_registry.registerProfile(
+        'bigfile',
+        'CPS File Mailer Big File',
+        "CPS File Mailer for CPSTramline's Big File",
+        'profiles/bigfile',
+        'CPSFileMailer',
+        EXTENSION,
+        for_=ICPSSite)

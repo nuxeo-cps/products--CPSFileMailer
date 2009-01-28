@@ -45,3 +45,12 @@ msgstr "Sie haben die folgende Datei angefordet""
 
 msgid "cpsfilemailer_token_expiration_msg"
 msgstr "Dieser Link wird bis %m.%d.%Y, um %H:%M gültig bleiben"
+
+# ACTIONS
+
+msgid "action_send_by_email"
+msgstr "Bei Email schicken"
+
+msgid "action_notify_content"
+msgstr "Benachrichtiegen"
+

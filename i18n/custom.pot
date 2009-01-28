@@ -19,3 +19,10 @@ msgstr ""
 msgid "cpsfilemailer_token_expiration_msg"
 msgstr ""
 
+# ACTIONS
+
+msgid "action_send_by_email"
+msgstr ""
+
+msgid "action_notify_content"
+msgstr ""

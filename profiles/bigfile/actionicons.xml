@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<action-icons>
+ <action-icon category="object" action_id="email_file"
+              title="Send a file by email" priority="333"
+              icon_expr="actionicon_send_email_notif.png"/>
+</action-icons>

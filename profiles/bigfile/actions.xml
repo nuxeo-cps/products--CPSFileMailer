@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<object name="portal_actions">
+ <action-provider name="portal_subscriptions">
+  <!-- GR we could do this on the File portal_type as well, if for instance
+       we wanted to get rid of CPSSubscriptions dependency -->
+  <action title="action_send_by_email" action_id="email_file"
+     category="object" condition_expr="python:object.portal_type in ['File', 'Big File']"
+     url_expr="string:${object_url}/cfm_email_form" visible="True">
+   <permission>Can Notify Content</permission>
+  </action>
+  <action title="action_notify_content" action_id="notify_content"
+     category="object" condition_expr="python:object.portal_type not in ['Portal']"
+     url_expr="string:${object_url}/content_notify_email_form" visible="True">
+   <permission>Can Notify Content</permission>
+  </action>
+ </action-provider>
+</object>

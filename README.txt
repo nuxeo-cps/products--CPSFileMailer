@@ -7,6 +7,10 @@ HOW TO INSTALL
 
 Import CPSFileMailer 'default' profile and you're set
 
+Optionaly, you can add the CPSFileMailer 'bigfile' profile, if you're using
+this in conjunction with CPSTramline 'bigfile'.
+See the end of this document for details on the latter.
+
 OPERATION
 ---------
 It replaces the standard "notify_by_email" action so that
@@ -38,5 +42,10 @@ forget to add ?__disable_cookie_login=1 if you want to perform a BASIC
 authentication (convenient with tools such as wget). 
 
 
+THE BIGFILE PROFILE
+-------------------
+Instead of replacing the standard 'notify_by_email', this profile adds a new action
+'send_by_email' (so that File documents have both) and is ready to serve documents
+of type 'Big File', as provided by CPSTramline's 'bigfile' profile.
 
 
