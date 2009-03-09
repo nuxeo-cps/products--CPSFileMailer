@@ -1,0 +1,21 @@
+===========================================================
+Package: CPSFileMailer 0.1.0
+===========================================================
+First release built by: madarche at: 2009-03-09T09:55:54
+SVN Tag: https://svn.nuxeo.org/pub/CPS3/products/CPSFileMailer/tags/0.1.0
+Build from: https://svn.nuxeo.org/pub/CPS3/products/CPSFileMailer/trunk@53469
+
+Requires
+~~~~~~~~
+- CPSSubscriptions
+New features
+~~~~~~~~~~~~
+- Now available as part of the full CPS distribution 
+- 
+Bug fixes
+~~~~~~~~~
+- 
+New internal features
+~~~~~~~~~~~~~~~~~~~~~
+- 
+
