@@ -1,4 +1,21 @@
 ===========================================================
+Package: CPSFileMailer 0.1.1
+===========================================================
+First release built by: gracinet at: 2010-03-13T17:35:05
+Requires
+~~~~~~~~
+-
+New features
+~~~~~~~~~~~~
+-
+Bug fixes
+~~~~~~~~~
+- First hgbundler managed release
+New internal features
+~~~~~~~~~~~~~~~~~~~~~
+- 
+
+===========================================================
 Package: CPSFileMailer 0.1.0
 ===========================================================
 First release built by: madarche at: 2009-03-09T09:55:54
