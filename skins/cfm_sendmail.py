@@ -7,6 +7,7 @@ members, explicit_recipients_emails, mail_subject, mail_body
 """
 
 from Products.CMFCore.utils import getToolByName
+from Products.CPSUtil.text import get_final_encoding
 
 if REQUEST is not None:
     kw.update(REQUEST.form)
@@ -16,17 +17,15 @@ explicit_recipients_emails = kw.get('explicit_recipients_emails', [])
 mail_subject = kw.get('mail_subject', '')
 mail_body = kw.get('mail_body', '')
 
-mcat = context.translation_service
-
 fmtool = context.portal_filemailer
 cpsmcat = context.translation_service
+encoding = get_final_encoding(cpsmcat)
 
 token, filename, exp = fmtool.createTokenFor(context) 
 base_url = fmtool.getBaseUrl()
 mail_body = mail_body + '\n%s/cfm_get?token=%s&file=%s\n%s\n' % (
     base_url, token, filename, exp.strftime(
-        cpsmcat('cpsfilemailer_token_expiration_msg').encode('iso-8859-15')))
-
+        cpsmcat('cpsfilemailer_token_expiration_msg').encode(encoding)))
 
 mtool = getToolByName(context, 'portal_membership')
 member = mtool.getAuthenticatedMember()
