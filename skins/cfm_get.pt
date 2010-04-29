@@ -1,4 +1,4 @@
-<tal:block define="tok request/form/token;
+<tal:block define="tok request/token | request/form/token;
 	   	   base_url here/portal_url/getBaseUrl;
 		   target python:here.portal_filemailer.retrieveFile(tok);
 		   filename target/title_or_id;
