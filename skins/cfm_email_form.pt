@@ -1,27 +1,71 @@
-<tal:block define="
-  global dirname request/dirname|string:members;
-  global dir here/portal_directories/?dirname;
-  global dirtitle dir/title_or_id;
-  validate python: request.has_key('cpsdirectory_search_button');
-  dummy python:request.set('formaction', 'cfm_email_form');
-  dummy2 python:request.set('input_id', request.get('input_id'));
-  res python: dir.renderSearchDetailed(request=request, validate=validate,
-                                       callback='cfm_email_do_search_results',
-                                       layout_mode='search_noid',
-                                       call_context=here);
-  global rendered_main python: res[0];
-  global ok python: res[1];
-  ds python: res[2];
-  global portal_status_message python: (validate and not ok and
-  'psm_content_error') or '';">
-  <metal:block use-macro="here/main_template/macros/master">
-    <metal:block fill-slot="header">
-      <h1 i18n:translate="heading_notify_content_form">
-        Search members to add to recipients list
-      </h1>
-    </metal:block>
-    <metal:block fill-slot="main">
-      <div tal:replace="structure rendered_main">Rendered main...</div>
-    </metal:block>
+<html metal:use-macro="here/main_template/macros/master"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+  <metal:block fill-slot="header">
+    <h1 i18n:translate="cpsfilemailer_heading">Send content by mail</h1>
   </metal:block>
-</tal:block>
+
+  <metal:block fill-slot="main">
+
+    <p i18n:translate="cpsfilemailer_help">
+      Through this page, you can send a special, short-lived link by mail to
+      anybody. By following the link from the mail, the recipients may then
+      download the attached file content without any kind of authentication.
+    </p>
+
+    <tal:comment condition="nothing">
+      TODO Next time use a layout to gain validation etc.
+    </tal:comment>
+
+    <form action="cfm_sendmail" method="post"
+	  tal:attributes="action string:${here/absolute_url}/cfm_sendmail">
+
+      <div class="row">
+	<div class="label">
+	  <label for="recipient_emails"
+		 i18n:translate="label_filemailer_enter_emails">
+	    Enter recipient emails (one email per line)
+	  </label>
+	  <div class="field" align="center">
+	    <textarea name="explicit_recipients_emails:lines"
+		      rows="10" cols="60"></textarea>
+	  </div>
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="label">
+	  <span i18n:translate="label_mail_subject">
+	    Mail Subject
+	  </span>
+	</div>
+	<div class="field" align="center">
+	  <input type="text" name="mail_subject" size="62" value="" />
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="label">
+	  <span i18n:translate="label_mail_body">
+	    Mail body
+	  </span>
+	</div>
+	<div class="field" align="center">
+	  <textarea name="mail_body" rows="10" cols="60"></textarea>
+	</div>
+      </div>
+
+      <p>
+	<input type="submit" class="standalone" value="button_ok"
+	       name="cfm_sendmail"
+	       i18n:attributes="value" />
+	<input type="button" class="standalone" value="button_back"
+	       onclick="javascript:history.back()" i18n:attributes="value" />
+      </p>
+    </form>
+
+  </metal:block>
+</html>
+

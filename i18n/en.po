@@ -54,4 +54,14 @@ msgstr "Send via email"
 msgid "action_notify_content"
 msgstr "Notify"
 
+# LAYOUT OR FORM LABELS
+
+msgid "label_filemailer_enter_emails"
+msgstr "Enter recipients e-mail addresses (one per line, no commas)"
+
+# Send form
+
+msgid "cpsfilemailer_heading"
+msgstr "Send content via e-mail"
+
 
