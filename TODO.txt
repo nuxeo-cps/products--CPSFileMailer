@@ -1,0 +1,6 @@
+Use a layout
+Use a browser view
+
+Cut the dep from CPSSubscriptions by using the saner CPSUtil.mail
+module. Might require the view because of restricted code.
+
