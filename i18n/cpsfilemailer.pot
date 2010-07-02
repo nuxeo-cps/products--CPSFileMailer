@@ -106,3 +106,15 @@ msgstr ""
 msgid "action_notify_content"
 msgstr ""
 
+# LAYOUT OR FORM LABELS
+
+msgid "label_filemailer_enter_emails"
+msgstr ""
+
+# Send form
+
+msgid "cpsfilemailer_heading"
+msgstr ""
+
+msgid "cpsfilemailer_help"
+msgstr ""
