@@ -57,7 +57,7 @@
 	</div>
       </div>
 
-      <p>
+      <p class="buttons">
 	<input type="submit" class="standalone" value="button_ok"
 	       name="cfm_sendmail"
 	       i18n:attributes="value" />
