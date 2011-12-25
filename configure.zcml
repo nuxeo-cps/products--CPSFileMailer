@@ -30,7 +30,4 @@
            Products.GenericSetup.interfaces.ISetupEnviron"
       />
 
-  <five:traversable
-      class=".tool.FileMailerTool"/>
-
 </configure>
