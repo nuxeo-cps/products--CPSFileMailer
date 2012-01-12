@@ -18,6 +18,7 @@
 # $Id: __init__.py 890 2008-06-18 18:26:32Z joe $
 
 import unittest
+from Products.CMFCore.utils import getToolByName
 from Products.CPSDefault.tests.CPSTestCase import CPSTestCase
 from Products.CPSFileMailer.tests.layer import CPSFileMailerLayer
 
@@ -51,9 +52,17 @@ class FileMailerToolIntegrationTestCase(CPSTestCase):
         self.wftool = self.portal.portal_workflow
         self.fmtool = self.portal.portal_filemailer
         f = File('file', 'truc.txt', 'here it is')
-        docname = self.wftool.invokeFactoryFor(self.ws, 'File', 'item', 
+        docname = self.wftool.invokeFactoryFor(self.ws, 'File', 'item',
                                                 file=f)
         self.doc = getattr(self.ws, docname)
+
+    def testSkins(self):
+        # check that our skin layer is before cpsdefault
+        # actually this is a test of CPSCore's adapter for the skins tool
+        # and should be done cleanly in CPSCore tests (no time right now, TODO)
+        sktool = getToolByName(self.portal, 'portal_skins')
+        path = sktool._getSelections()['CPSSkins'].split(',')
+        self.failIf(path.index('cps_filemailer') > path.index('cps_default'))
 
     def testCreateToken(self):
         token, _, _ = self.fmtool.createTokenFor(self.doc)
