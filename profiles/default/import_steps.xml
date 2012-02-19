@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <import-steps>
  <import-step id="filemailer" version="20081117-01"
-              handler="Products.CPSFileMailer.exportimport.importFileMailerTool"
-              title="File MailerTool">
+              handler="Products.CPSFileMailer.import_step"
+              title="File Mailer Tool">
   <dependency step="toolset"/>
   Import File Mailer Tool
  </import-step>

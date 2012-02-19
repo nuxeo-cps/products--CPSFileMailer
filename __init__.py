@@ -25,6 +25,8 @@ from Products.CMFCore.DirectoryView import registerDirectory
 from Products.GenericSetup import profile_registry
 from Products.GenericSetup import EXTENSION
 
+from Products.CPSUtil.genericsetup import tool_steps
+
 from Products.CPSCore.interfaces import ICPSSite
 from Products.CPSCore.upgrade import registerUpgradeCategory
 
@@ -51,3 +53,6 @@ def initialize(registrar):
         'CPSFileMailer',
         EXTENSION,
         for_=ICPSSite)
+
+export_step, import_step = tool_steps('portal_filemailer',
+                                      logger_id='filemailer')

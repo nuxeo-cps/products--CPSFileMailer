@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <export-steps>
  <export-step id="filemailer"
-              handler="Products.CPSFileMailer.exportimport.exportFileMailerTool"
-              title="File Mailr Tool">
+              handler="Products.CPSFileMailer.export_step"
+              title="File Mailer Tool">
   Export File Mailer tool and its configuration.
  </export-step>
 </export-steps>
