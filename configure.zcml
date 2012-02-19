@@ -14,8 +14,6 @@
  along with this program; if not, write to the Free Software
  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
  02111-1307, USA.
-
- $Id: __init__.py 890 2008-06-18 18:26:32Z joe $
 -->
 
 <configure
@@ -24,7 +22,7 @@
     xmlns:five="http://namespaces.zope.org/five">
 
   <adapter
-      factory=".exportimport.FileMailerToolXMLAdapter"
+      factory="Products.CPSUtil.genericsetup.PropertyObjectXMLAdapter"
       provides="Products.GenericSetup.interfaces.IBody"
       for=".interfaces.IFileMailerTool
            Products.GenericSetup.interfaces.ISetupEnviron"

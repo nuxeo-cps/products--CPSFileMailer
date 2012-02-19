@@ -14,8 +14,6 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
 # 02111-1307, USA.
-#
-# $Id: tool.py 973 2008-10-20 07:03:15Z joe $
 
 import os
 import errno
@@ -44,7 +42,7 @@ from interfaces import IFileMailerTool
 
 TOKEN_DIR = 'filetokens'
 
-class FileMailerTool(UniqueObject, PropertiesPostProcessor, 
+class FileMailerTool(UniqueObject, PropertiesPostProcessor,
                      SimpleItemWithProperties):
     id = 'portal_filemailer'
     meta_type = 'File Mailer Tool'
@@ -77,7 +75,7 @@ class FileMailerTool(UniqueObject, PropertiesPostProcessor,
         """Extract the fields_mapping dict."""
 
         self.fields_mapping = tuple(l for l in self.fields_mapping if l.strip())
-        self.fields_mapping_c = dict(l.strip().split(':') 
+        self.fields_mapping_c = dict(l.strip().split(':')
                                      for l in self.fields_mapping)
 
     def _getTokensDirectory(self):
@@ -85,7 +83,7 @@ class FileMailerTool(UniqueObject, PropertiesPostProcessor,
 
     security.declarePublic('getBaseUrl')
     def getBaseUrl(self):
-        """Return base url. 
+        """Return base url.
 
         Defaults to standard meaning of 'base_url."""
         return self.getProperty('base_url') or getToolByName(
@@ -116,17 +114,17 @@ class FileMailerTool(UniqueObject, PropertiesPostProcessor,
             entry['token'] = token
             try:
                 tdir._createEntry(entry)
-            except KeyError: 
+            except KeyError:
                 pass
             else:
                 break
 
         return token, self._extractFile(doc).title, exp
-        
+
     def _purgeOutdatedTokens(self):
         """See interface.
 
-        Dumb implementation based on the poor ZODBDirectory request 
+        Dumb implementation based on the poor ZODBDirectory request
         capabilities."""
 
         tdir = self._getTokensDirectory()
@@ -156,12 +154,12 @@ class FileMailerTool(UniqueObject, PropertiesPostProcessor,
         tdir = self._getTokensDirectory()
         try:
             entry = tdir._getEntry(token)
-        except KeyError: 
+        except KeyError:
             raise Unauthorized
-        
+
         if entry['expiration'].isPast():
             raise Unauthorized
-        
+
         repotool = getToolByName(self, 'portal_repository')
         try:
             doc = repotool._getOb(entry['doc'])
@@ -181,8 +179,8 @@ class FileMailerTool(UniqueObject, PropertiesPostProcessor,
         ptype = doc.portal_type
         field = self.fields_mapping_c.get(doc.portal_type)
         if field is None:
-            raise ValueError("portal_type '%s' unknown" % ptype) 
-        
+            raise ValueError("portal_type '%s' unknown" % ptype)
+
         # bypass of DataModel to avoid security problems
         return getattr(doc, field, None)
 
@@ -214,9 +212,6 @@ class FileServer(Acquisition.Explicit):
     def index_html(self):
         """Serve the file."""
         resp = self.req.RESPONSE
-        resp.setHeader('Content-Disposition', 
+        resp.setHeader('Content-Disposition',
                        'attachment; filename=%s' % self.file.title_or_id())
         return self.file.index_html(self.req, resp)
-
-
-        
