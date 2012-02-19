@@ -44,8 +44,12 @@ TOKEN_DIR = 'filetokens'
 
 class FileMailerTool(UniqueObject, PropertiesPostProcessor,
                      SimpleItemWithProperties):
+
     id = 'portal_filemailer'
     meta_type = 'File Mailer Tool'
+
+    generic_setup_name = 'filemailer'
+    generic_setup_logger_id = 'filemailer'
 
     implements(IFileMailerTool)
 

@@ -22,7 +22,7 @@
     xmlns:five="http://namespaces.zope.org/five">
 
   <adapter
-      factory="Products.CPSUtil.genericsetup.PropertyObjectXMLAdapter"
+      factory="Products.CPSUtil.genericsetup.PropertiesSubObjectsXMLAdapter"
       provides="Products.GenericSetup.interfaces.IBody"
       for=".interfaces.IFileMailerTool
            Products.GenericSetup.interfaces.ISetupEnviron"
